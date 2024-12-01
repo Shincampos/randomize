@@ -4,22 +4,15 @@ body {
     margin: 0; /* Rimuove margini di default */
 }
 
-.header {
-    position: fixed; /* Fissa la posizione */
-    top: 0; /* Posiziona in cima */
-    left: 0; /* Allinea a sinistra */
-    right: 0; /* Allinea a destra */
-    background-color: white; /* Sfondo bianco */
-    padding: 10px 0; /* Padding per il contenuto */
-    text-align: center; /* Allinea il testo al centro */
-    z-index: 1000; /* Assicura che sia sopra altri elementi */
-}
-
 .input-area {
     border: 2px solid black; /* Contorno marcato in nero */
     border-radius: 10px;
     padding: 15px;
     margin-top: 60px; /* Spazio per evitare sovrapposizioni con la header */
+}
+
+.header {
+    text-align: center; /* Allinea il testo al centro */
 }
 
 .container {
@@ -31,32 +24,30 @@ input {
     margin: 10px; /* Margine per separare il campo dagli altri elementi */
     border: 2px solid #007bff; /* Colore del bordo blu (stesso colore dei pulsanti) */
     border-radius: 10px; /* Angoli smussati per il campo di input */
-    width: 250px; /* Imposta una larghezza fissa per il campo di input */
-    max-width: 100%; /* Assicura che non superi la larghezza del contenitore */
 }
 
 button {
-    background-color: #007bff; /* Colore di sfondo blu */
-    color: white; /* Colore del testo bianco */
+    padding: 10px 15px;
+    margin: 5px;
     border-radius: 10px; /* Angoli smussati per i pulsanti */
-    padding: 10px 15px; /* Padding per i pulsanti */
-    margin: 5px; /* Margine per separare i pulsanti */
     border: none; /* Rimuove il bordo di default del pulsante */
+    background-color: #007bff; /* Colore di sfondo blu per i pulsanti */
+    color: white; /* Colore del testo bianco per i pulsanti */
     cursor: pointer; /* Cambia il cursore quando si passa sopra il pulsante */
 }
 
 button:hover {
     background-color: #0056b3; /* Colore di sfondo più scuro al passaggio del mouse */
-
 }
 
 .nome-selezionato {
     display: none; /* Nasconde il rettangolo inizialmente */
-    background-color: rgba(39, 246, 67, 0.2); /* Sfondo traslucido simile ai nomi */
-    color: rgb(5, 5, 5); /* Colore del testo simile ai nomi */
+    background-color: #28a745; /* Sfondo verde per il nome selezionato */
+    color: white; /* Colore del testo bianco per il nome selezionato */
     border-radius: 10px;
     padding: 10px; /* Padding simile ai rettangoli dei nomi */
-    margin-top: 60px; /* Spazio sopra il rettangolo verde */
+    margin-top: 20px; /* Spazio sopra il rettangolo verde */
+    margin-bottom: 20px; /* Spazio sotto il rettangolo verde */
 }
 
 /* Rimuovi lo sfondo blu dal contenitore della lista dei nomi */
@@ -85,9 +76,9 @@ button:hover {
 }
 
 .squadra {
-    background-color: rgba(39, 246, 67, 0.2); /* Sfondo bianco traslucido per le squadre */
-    border-radius: 10px;
-    border: 2px solid #ccc;
+    background-color: #28a745; /* Sfondo verde per le squadre */
+    color: white; /* Colore del testo bianco per le squadre */
+    border-radius: 10px; /* Angoli smussati per le squadre */
+    border: 2px solid #007bff; /* Bordo blu (opzionale, se desideri un contorno) */
     padding: 15px;
-    margin-top: 60px;
 }

@@ -21,6 +21,13 @@ document.getElementById('inserisciBtn').addEventListener('click', () => {
    nomeInput.focus();
 });
 
+// Aggiungi l'evento per gestire l'invio con il tasto "Invio"
+nomeInput.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') { // Controlla se il tasto premuto è "Invio"
+        document.getElementById('inserisciBtn').click(); // Simula il clic sul pulsante "Inserisci"
+    }
+});
+
 document.getElementById('selezionaGiocatoreBtn').addEventListener('click', () => {
    if (nomi.length > 0) {
        const indiceCasuale = Math.floor(Math.random() * nomi.length);
@@ -41,29 +48,34 @@ document.getElementById('selezionaGiocatoreBtn').addEventListener('click', () =>
 });
 
 document.getElementById('creaSquadraBtn').addEventListener('click', () => {
-   if (nomi.length > 0) {
-       const squadra1 = [];
-       const squadra2 = [];
-       
-       while (nomi.length > 0) {
-           if (Math.random() < 0.5) {
-               squadra1.push(nomi.pop());
-           } else {
-               squadra2.push(nomi.pop());
-           }
-       }
+    if (nomi.length > 0) {
+        const squadra1 = [];
+        const squadra2 = [];
+        
+        while (nomi.length > 0) {
+            const indiceCasuale = Math.floor(Math.random() * nomi.length);
+            const nomeSelezionato = nomi[indiceCasuale];
+            nomi.splice(indiceCasuale, 1); // Rimuove il nome selezionato dalla lista
 
-       mostraSquadre(squadra1, squadra2);
-       
-       // Nascondi il rettangolo del nome selezionato
-       nomeSelezionato.style.display = 'none';
+            // Alterna l'aggiunta dei nomi alle squadre
+            if (squadra1.length < Math.ceil(nomi.length / 2)) {
+                squadra1.push(nomeSelezionato);
+            } else {
+                squadra2.push(nomeSelezionato);
+            }
+        }
 
-       // Mantieni il focus nel campo di input
-       nomeInput.focus();
-       
-       // Pulisci l'input
-       nomeInput.value = ''; 
-   }
+        mostraSquadre(squadra1, squadra2);
+        
+        // Nascondi il rettangolo del nome selezionato
+        nomeSelezionato.style.display = 'none';
+
+        // Mantieni il focus nel campo di input
+        nomeInput.focus();
+        
+        // Pulisci l'input
+        nomeInput.value = ''; 
+    }
 });
 
 document.getElementById('resetBtn').addEventListener('click', () => {
@@ -92,14 +104,14 @@ function aggiornaListaNomi() {
 }
 
 function mostraSquadre(squadra1, squadra2) {
-   squadreContainer.innerHTML = `
-       <div class="squadra">
-           <h3>Squadra 1</h3>
-           ${squadra1.map(nome => `<p>${nome}</p>`).join('')}
-       </div>
-       <div class="squadra">
-           <h3>Squadra 2</h3>
-           ${squadra2.map(nome => `<p>${nome}</p>`).join('')}
-       </div>
-   `;
+    squadreContainer.innerHTML = `
+        <div class="squadra">
+            <h3>Squadra 1</h3>
+            ${squadra1.map(nome => `<p>${nome}</p>`).join('')}
+        </div>
+        <div class="squadra">
+            <h3>Squadra 2</h3>
+            ${squadra2.map(nome => `<p>${nome}</p>`).join('')}
+        </div>
+    `;
 }
