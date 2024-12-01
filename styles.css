@@ -1,6 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-image: url('sfondo.jpg'); /* Nome del file immagine */
+    background-size: cover; /* Copre l'intero schermo */
+    background-position: center; /* Centra l'immagine */
     margin: 0; /* Rimuove margini di default */
 }
 
@@ -48,6 +50,7 @@ button:hover {
     padding: 10px; /* Padding simile ai rettangoli dei nomi */
     margin-top: 20px; /* Spazio sopra il rettangolo verde */
     margin-bottom: 20px; /* Spazio sotto il rettangolo verde */
+    text-transform: uppercase; /* Trasforma il testo in maiuscolo */
 }
 
 /* Rimuovi lo sfondo blu dal contenitore della lista dei nomi */
@@ -57,11 +60,12 @@ button:hover {
 
 /* Stile per i singoli rettangoli dei nomi */
 .nome-rectangle {
-    background-color: rgba(39, 115, 246, 0.2); /* Sfondo bianco traslucido per i nomi */
-    color: rgb(5, 5, 5);
+    background-color: rgba(39, 115, 246, 0.2); /* Sfondo blu traslucido per i nomi */
+    color: white; /* Colore del testo bianco per i nomi */
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 10px; /* Spazio tra i rettangoli dei nomi */
+    text-transform: uppercase; /* Trasforma il testo in maiuscolo per i nomi inseriti */
 }
 
 /* Aggiunta di un bordo per ogni nome per migliorare la visibilità (opzionale) */
@@ -81,4 +85,5 @@ button:hover {
     border-radius: 10px; /* Angoli smussati per le squadre */
     border: 2px solid #007bff; /* Bordo blu (opzionale, se desideri un contorno) */
     padding: 15px;
+    text-transform: uppercase; /* Trasforma il testo in maiuscolo per le squadre */
 }
