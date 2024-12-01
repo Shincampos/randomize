@@ -5,20 +5,20 @@ const nomeSelezionato = document.getElementById('nomeSelezionato');
 const squadreContainer = document.getElementById('squadreContainer');
 
 document.getElementById('inserisciBtn').addEventListener('click', () => {
-   const nome = nomeInput.value.trim();
-   
-   if (nome) {
-       nomi.push(nome);
-       aggiornaListaNomi();
-       nomeInput.value = '';
-       // Nascondi il rettangolo del nome selezionato
-       nomeSelezionato.style.display = 'none';
-       // Nascondi le squadre
-       squadreContainer.innerHTML = ''; // Pulisce le squadre
-   }
-   
-   // Mantieni il focus nel campo di input
-   nomeInput.focus();
+    const nome = nomeInput.value.trim();
+    
+    if (nome) {
+        nomi.unshift(nome); // Aggiunge il nome all'inizio dell'array
+        aggiornaListaNomi();
+        nomeInput.value = '';
+        // Nascondi il rettangolo del nome selezionato
+        nomeSelezionato.style.display = 'none';
+        // Nascondi le squadre
+        squadreContainer.innerHTML = ''; // Pulisce le squadre
+    }
+    
+    // Mantieni il focus nel campo di input
+    nomeInput.focus();
 });
 
 // Aggiungi l'evento per gestire l'invio con il tasto "Invio"
