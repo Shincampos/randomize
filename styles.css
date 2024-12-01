@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0; /* Rimuove margini di default */
+}
+
+.header {
+    position: fixed; /* Fissa la posizione */
+    top: 0; /* Posiziona in cima */
+    left: 0; /* Allinea a sinistra */
+    right: 0; /* Allinea a destra */
+    background-color: white; /* Sfondo bianco */
+    padding: 10px 0; /* Padding per il contenuto */
+    text-align: center; /* Allinea il testo al centro */
+    z-index: 1000; /* Assicura che sia sopra altri elementi */
+}
+
+.input-area {
+    border: 2px solid black; /* Contorno marcato in nero */
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 60px; /* Spazio per evitare sovrapposizioni con la header */
+}
+
+.container {
+    text-align: center;
+}
+
+input {
+    padding: 10px; /* Padding per il campo di input */
+    margin: 10px; /* Margine per separare il campo dagli altri elementi */
+    border: 2px solid #007bff; /* Colore del bordo blu (stesso colore dei pulsanti) */
+    border-radius: 10px; /* Angoli smussati per il campo di input */
+    width: 250px; /* Imposta una larghezza fissa per il campo di input */
+    max-width: 100%; /* Assicura che non superi la larghezza del contenitore */
+}
+
+button {
+    background-color: #007bff; /* Colore di sfondo blu */
+    color: white; /* Colore del testo bianco */
+    border-radius: 10px; /* Angoli smussati per i pulsanti */
+    padding: 10px 15px; /* Padding per i pulsanti */
+    margin: 5px; /* Margine per separare i pulsanti */
+    border: none; /* Rimuove il bordo di default del pulsante */
+    cursor: pointer; /* Cambia il cursore quando si passa sopra il pulsante */
+}
+
+button:hover {
+    background-color: #0056b3; /* Colore di sfondo più scuro al passaggio del mouse */
+
+}
+
+.nome-selezionato {
+    display: none; /* Nasconde il rettangolo inizialmente */
+    background-color: rgba(39, 246, 67, 0.2); /* Sfondo traslucido simile ai nomi */
+    color: rgb(5, 5, 5); /* Colore del testo simile ai nomi */
+    border-radius: 10px;
+    padding: 10px; /* Padding simile ai rettangoli dei nomi */
+    margin-top: 60px; /* Spazio sopra il rettangolo verde */
+}
+
+/* Rimuovi lo sfondo blu dal contenitore della lista dei nomi */
+.lista-nomi {
+    margin-top: 20px; /* Spazio sopra la lista dei nomi per distanziarla dai pulsanti e dal nome selezionato */
+}
+
+/* Stile per i singoli rettangoli dei nomi */
+.nome-rectangle {
+    background-color: rgba(39, 115, 246, 0.2); /* Sfondo bianco traslucido per i nomi */
+    color: rgb(5, 5, 5);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px; /* Spazio tra i rettangoli dei nomi */
+}
+
+/* Aggiunta di un bordo per ogni nome per migliorare la visibilità (opzionale) */
+.nome-rectangle {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Bordi bianchi traslucidi tra i nomi */
+}
+
+.squadre-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px; /* Spazio sopra le squadre per distanziarle dalla lista dei nomi */
+}
+
+.squadra {
+    background-color: rgba(39, 246, 67, 0.2); /* Sfondo bianco traslucido per le squadre */
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    padding: 15px;
+    margin-top: 60px;
+}

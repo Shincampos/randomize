@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleziona Giocatore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <input type="text" id="nomeInput" placeholder="Inserisci un nome">
+        <button id="inserisciBtn">Inserisci</button>
+        <button id="selezionaGiocatoreBtn">Seleziona Giocatore</button>
+        <button id="creaSquadraBtn">Crea Squadra</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+
+    <div class="input-area">
+        <!-- Questa area ha un contorno marcato -->
+    </div>
+
+    <div class="container">
+        <div id="nomeSelezionato" class="nome-selezionato"></div> <!-- Rettangolo verde -->
+        <div id="squadreContainer" class="squadre-container"></div> <!-- Contenitore delle squadre -->
+        <div id="listaNomi" class="lista-nomi"></div> <!-- Rettangolo blu -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
